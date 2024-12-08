@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Car Details</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #1e1e2f; /* Dark background */
+            color: #e8e8f5; /* Light text */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        table {
+            background-color: #2e2e4f; /* Slightly lighter than the background */
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); /* Darker shadow */
+            width: 100%;
+            max-width: 600px;
+        }
+        h1 {
+            color: #ffca28; /* Vibrant yellow */
+            text-align: center;
+            font-family: 'Quicksand', sans-serif;
+            margin-bottom: 20px;
+            font-size: 2.2rem;
+            font-weight: 600;
+        }
+        label {
+            font-weight: 500;
+            font-size: 1rem;
+            margin-bottom: 5px;
+            color: #ffca28; /* Same vibrant yellow */
+        }
+        input[type="text"] {
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 1rem;
+            background-color: #3e3e6f; /* Darker field background */
+            color: #e8e8f5;
+            border: 1px solid #ffca28; /* Border to match label color */
+            transition: border-color 0.3s, box-shadow 0.3s;
+            width: 100%;
+        }
+        input[type="text"]:focus {
+            border-color: #ffca28;
+            box-shadow: 0 0 10px rgba(255, 202, 40, 0.7); /* Light yellow glow */
+            outline: none;
+        }
+        button {
+            width: 100%;
+            background-color: #ffca28; /* Vibrant yellow */
+            color: #1e1e2f; /* Dark text */
+            border: none;
+            padding: 12px;
+            font-size: 1rem;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+            cursor: pointer;
+            margin-top:20px;
+        }
+        button:hover {
+            background-color: #ffc107; /* Slightly lighter yellow */
+            color: #1e1e2f;
+            transform: translateY(-2px);
+        }
+        button:focus {
+            outline: none;
+            box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.5); /* Light yellow glow */
+        }
+    </style>
+</head>
+<body>
+    <form action="/car-service-system/AddCarDetails">
+        <table>
+            <tr>
+                <td colspan="2"><h1>Add Car Details</h1></td>
+            </tr>
+            <tr>
+                <td><label for="carModel">Car Model</label></td>
+                <td><input type="text" id="carModel" name="carModel" placeholder="Enter car model" required></td>
+            </tr>
+            <tr>
+                <td><label for="carType">Car Type</label></td>
+                <td><input type="text" id="carType" name="carType" placeholder="Enter car type" required></td>
+            </tr>
+            <tr>
+                <td><label for="carRegistrationNumber">Car Registration Number</label></td>
+                <td><input type="text" id="carRegistrationNumber" name="carRegistrationNumber" placeholder="Enter registration number" required></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit">Submit</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
